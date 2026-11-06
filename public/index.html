@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Swachh Scan — Find a clean public washroom near you</title>
+  <meta name="description" content="Find clean public washrooms across India, rate how clean they are, report problems so they get fixed, and earn Swachh Coins for rewards.">
+  <meta name="theme-color" content="#0a7c68">
+  <meta property="og:title" content="Swachh Scan — Clean public washrooms near you">
+  <meta property="og:description" content="Find the nearest clean washroom, rate it, report problems and earn Swachh Coins.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>try{var t=JSON.parse(localStorage.getItem('ss.theme')||'""');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+</head>
+<body class="map-page">
+<header id="siteHead"></header>
+<div class="app">
+
+  <!-- Top: brand (phones), search, quick filters -->
+  <div class="topbar">
+    <div class="brand-bar">
+      <a class="brand" href="/" aria-label="Swachh Scan home">
+        <img class="brand-mark" src="/favicon.svg" alt="" width="26" height="26">
+        <span>Swachh<b>Scan</b></span>
+      </a>
+      <a class="coin-pill" data-coins href="/me.html"></a>
+    </div>
+
+    <div class="search" role="search">
+      <div class="search-field">
+        <svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-search"/></svg>
+        <label class="visually-hidden" for="q">Search washrooms or places</label>
+        <input id="q" type="search" placeholder="Search a city, area, PIN or name" autocomplete="off" spellcheck="false" enterkeyhint="search"
+               role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list">
+        <button class="icon-btn" id="qClear" type="button" aria-label="Clear search" hidden>
+          <svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-x"/></svg>
+        </button>
+      </div>
+      <ul class="suggest" id="suggest" role="listbox" aria-label="Suggestions" tabindex="-1" hidden></ul>
+    </div>
+
+    <div class="chips" id="chips" role="group" aria-label="Quick filters"></div>
+  </div>
+
+  <!-- Sheet: list / filters / details (sidebar on desktop, bottom sheet on phones) -->
+  <section class="sheet" id="sheet" aria-label="Washrooms">
+    <button class="sheet-handle" id="sheetHandle" type="button" aria-label="Show more of the list" aria-expanded="false" aria-controls="sheetBody"></button>
+    <div class="sheet-head" id="sheetHead">
+      <div class="count" id="count" aria-live="polite">Loading washrooms…</div>
+      <button class="chip" id="filtersBtn" type="button" aria-pressed="false">
+        <svg class="ic sm" aria-hidden="true"><use href="/img/icons.svg#i-filter"/></svg> Filters <span class="badge" id="filterBadge" hidden>0</span>
+      </button>
+    </div>
+    <div class="sheet-body" id="sheetBody">
+      <div class="view" id="listView"></div>
+      <div class="view" id="filterView" hidden></div>
+      <div class="view" id="detailView" hidden></div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <main class="map-wrap">
+    <div class="fabs">
+      <button class="fab" id="locateBtn" type="button" title="Find washrooms near me" aria-label="Find washrooms near me">
+        <svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-locate"/></svg><span class="fab-label" aria-hidden="true">Near me</span>
+      </button>
+      <button class="fab" id="addBtn" type="button" title="Add a missing washroom" aria-label="Add a missing washroom">
+        <svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-plus"/></svg><span class="fab-label" aria-hidden="true">Add missing</span>
+      </button>
+    </div>
+    <div id="map" role="region" aria-label="Map of washrooms. Use the list for keyboard access to each washroom."></div>
+    <div class="pick-overlay" id="pickOverlay" hidden>
+      <svg class="ic cross" aria-hidden="true"><use href="/img/icons.svg#i-crosshair"/></svg>
+    </div>
+    <div class="pick-bar" id="pickBar" hidden role="group" aria-label="Choose the washroom's location">
+      <span>Move the map so the pin is on the washroom</span>
+      <button class="btn sm" type="button" id="pickCancel">Cancel</button>
+      <button class="btn primary sm" type="button" id="pickOk">Use this spot</button>
+    </div>
+    <div class="loading" id="loading"><div><div class="spinner"></div>Loading washrooms…</div></div>
+  </main>
+</div>
+<nav id="tabbar"></nav>
+
+<!-- Add-a-washroom form (after choosing the spot on the map) -->
+<dialog id="addDialog" aria-labelledby="addTitle">
+  <div class="dlg">
+    <button class="icon-btn close" type="button" data-close aria-label="Close"><svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-x"/></svg></button>
+    <h2 id="addTitle">Add a missing washroom</h2>
+    <div id="addBody"></div>
+  </div>
+</dialog>
+
+<!-- Report a hygiene problem -->
+<dialog id="reportDialog" aria-labelledby="reportTitle">
+  <div class="dlg">
+    <button class="icon-btn close" type="button" data-close aria-label="Close"><svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-x"/></svg></button>
+    <h2 id="reportTitle">Report a problem</h2>
+    <div id="reportBody"></div>
+  </div>
+</dialog>
+
+<!-- QR dialog -->
+<dialog id="qrDialog" aria-labelledby="qrTitle">
+  <div class="dlg">
+    <button class="icon-btn close" type="button" data-close aria-label="Close"><svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-x"/></svg></button>
+    <h2 id="qrTitle">Scan-to-rate QR code</h2>
+    <p id="qrName"></p>
+    <div class="qr-box"><canvas id="qrCanvas" width="240" height="240" aria-label="QR code"></canvas></div>
+    <p>Print and stick this at the washroom. Anyone who scans it lands on this washroom’s page, ready to rate its cleanliness and earn Swachh Coins.</p>
+    <div class="row">
+      <a class="btn primary block" id="qrDownload" download="swachh-scan-qr.png">
+        <svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-download"/></svg> Download QR image
+      </a>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js" integrity="sha256-65UqrlgGoRAnKfKRuriH3eeDrOhZgZo1SCenduc+SGo=" crossorigin=""></script>
+<script src="/js/common.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

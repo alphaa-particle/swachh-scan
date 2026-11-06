@@ -1,0 +1,12 @@
+{
+  "name": "Swachh Scan — Clean public washrooms near you",
+  "short_name": "Swachh Scan",
+  "description": "Find clean public washrooms across India, rate them, report problems and earn Swachh Coins.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08130f",
+  "theme_color": "#0a7c68",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

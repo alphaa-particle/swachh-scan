@@ -1,0 +1,1586 @@
+{
+ "title": "Swachh Scan — India Public Washroom Database",
+ "about": {
+  "Total washrooms": "7533",
+  "Standalone public toilets": "6356",
+  "Facilities with a toilet (petrol pumps, malls, restaurants, stations…)": "1177",
+  "States / UTs covered": "36",
+  "Districts covered": "399",
+  "Recently verified": "4948",
+  "Data downloaded": "2026-11-04T11:25:42.744Z",
+  "Important": "These are the washrooms volunteers have mapped on OpenStreetMap, cleaned and de-duplicated. It is not every washroom in India: coverage is strong in big cities and thin in small towns. Records last edited 5–15 years ago keep only their location. Cleanliness ratings come from Swachh Scan users and are shown in the app, not in this file.",
+  "Credit required": "Map data © OpenStreetMap contributors, available under the Open Database Licence (ODbL). Show this credit in the app; if you publish this dataset, publish it under ODbL too."
+ },
+ "sheets": {
+  "About": "Totals, licence and notes",
+  "Washrooms": "Every cleaned washroom, one row each, with location, known details and source link",
+  "By State": "Counts per state/UT, freshness and how complete the details are",
+  "By Category": "Counts per type of place, with category groups",
+  "Columns": "What each column means, where it comes from and how often it is filled",
+  "Cleaning": "What each cleaning step changed",
+  "Sources": "Where the data came from, licences, method, and sources not included"
+ },
+ "byState": [
+  {
+   "State / UT": "Kerala",
+   "Total washrooms": 1219,
+   "Standalone public toilets": 1011,
+   "Facilities with toilet": 208,
+   "Districts with data": 14,
+   "% with free/paid info": 7.0,
+   "% with wheelchair info": 13.0,
+   "% with men/women info": 15.4,
+   "% with opening hours": 4.3,
+   "% recently verified": 53.0
+  },
+  {
+   "State / UT": "Karnataka",
+   "Total washrooms": 969,
+   "Standalone public toilets": 738,
+   "Facilities with toilet": 231,
+   "Districts with data": 30,
+   "% with free/paid info": 22.8,
+   "% with wheelchair info": 19.9,
+   "% with men/women info": 16.0,
+   "% with opening hours": 7.1,
+   "% recently verified": 77.9
+  },
+  {
+   "State / UT": "Delhi (NCT)",
+   "Total washrooms": 926,
+   "Standalone public toilets": 845,
+   "Facilities with toilet": 81,
+   "Districts with data": 1,
+   "% with free/paid info": 38.4,
+   "% with wheelchair info": 26.3,
+   "% with men/women info": 37.6,
+   "% with opening hours": 4.8,
+   "% recently verified": 78.8
+  },
+  {
+   "State / UT": "Maharashtra",
+   "Total washrooms": 748,
+   "Standalone public toilets": 634,
+   "Facilities with toilet": 114,
+   "Districts with data": 30,
+   "% with free/paid info": 14.7,
+   "% with wheelchair info": 18.4,
+   "% with men/women info": 17.1,
+   "% with opening hours": 7.1,
+   "% recently verified": 72.7
+  },
+  {
+   "State / UT": "Tamil Nadu",
+   "Total washrooms": 587,
+   "Standalone public toilets": 496,
+   "Facilities with toilet": 91,
+   "Districts with data": 36,
+   "% with free/paid info": 11.8,
+   "% with wheelchair info": 15.7,
+   "% with men/women info": 12.8,
+   "% with opening hours": 4.9,
+   "% recently verified": 63.0
+  },
+  {
+   "State / UT": "Uttar Pradesh",
+   "Total washrooms": 548,
+   "Standalone public toilets": 511,
+   "Facilities with toilet": 37,
+   "Districts with data": 34,
+   "% with free/paid info": 9.5,
+   "% with wheelchair info": 11.5,
+   "% with men/women info": 15.3,
+   "% with opening hours": 2.9,
+   "% recently verified": 46.7
+  },
+  {
+   "State / UT": "Madhya Pradesh",
+   "Total washrooms": 508,
+   "Standalone public toilets": 462,
+   "Facilities with toilet": 46,
+   "Districts with data": 20,
+   "% with free/paid info": 7.7,
+   "% with wheelchair info": 10.4,
+   "% with men/women info": 15.7,
+   "% with opening hours": 6.1,
+   "% recently verified": 27.4
+  },
+  {
+   "State / UT": "Telangana",
+   "Total washrooms": 329,
+   "Standalone public toilets": 213,
+   "Facilities with toilet": 116,
+   "Districts with data": 19,
+   "% with free/paid info": 4.9,
+   "% with wheelchair info": 28.0,
+   "% with men/women info": 23.1,
+   "% with opening hours": 6.1,
+   "% recently verified": 80.9
+  },
+  {
+   "State / UT": "Rajasthan",
+   "Total washrooms": 222,
+   "Standalone public toilets": 189,
+   "Facilities with toilet": 33,
+   "Districts with data": 24,
+   "% with free/paid info": 7.7,
+   "% with wheelchair info": 16.7,
+   "% with men/women info": 6.8,
+   "% with opening hours": 5.0,
+   "% recently verified": 71.2
+  },
+  {
+   "State / UT": "West Bengal",
+   "Total washrooms": 216,
+   "Standalone public toilets": 170,
+   "Facilities with toilet": 46,
+   "Districts with data": 20,
+   "% with free/paid info": 21.3,
+   "% with wheelchair info": 22.7,
+   "% with men/women info": 12.0,
+   "% with opening hours": 15.3,
+   "% recently verified": 84.3
+  },
+  {
+   "State / UT": "Himachal Pradesh",
+   "Total washrooms": 167,
+   "Standalone public toilets": 134,
+   "Facilities with toilet": 33,
+   "Districts with data": 12,
+   "% with free/paid info": 11.4,
+   "% with wheelchair info": 16.8,
+   "% with men/women info": 9.6,
+   "% with opening hours": 3.6,
+   "% recently verified": 57.5
+  },
+  {
+   "State / UT": "Gujarat",
+   "Total washrooms": 164,
+   "Standalone public toilets": 150,
+   "Facilities with toilet": 14,
+   "Districts with data": 19,
+   "% with free/paid info": 16.5,
+   "% with wheelchair info": 26.8,
+   "% with men/women info": 30.5,
+   "% with opening hours": 4.3,
+   "% recently verified": 78.0
+  },
+  {
+   "State / UT": "Andhra Pradesh",
+   "Total washrooms": 114,
+   "Standalone public toilets": 102,
+   "Facilities with toilet": 12,
+   "Districts with data": 13,
+   "% with free/paid info": 2.6,
+   "% with wheelchair info": 10.5,
+   "% with men/women info": 9.6,
+   "% with opening hours": 3.5,
+   "% recently verified": 79.8
+  },
+  {
+   "State / UT": "Haryana",
+   "Total washrooms": 113,
+   "Standalone public toilets": 87,
+   "Facilities with toilet": 26,
+   "Districts with data": 17,
+   "% with free/paid info": 15.9,
+   "% with wheelchair info": 18.6,
+   "% with men/women info": 21.2,
+   "% with opening hours": 12.4,
+   "% recently verified": 80.5
+  },
+  {
+   "State / UT": "Punjab",
+   "Total washrooms": 101,
+   "Standalone public toilets": 84,
+   "Facilities with toilet": 17,
+   "Districts with data": 16,
+   "% with free/paid info": 13.9,
+   "% with wheelchair info": 13.9,
+   "% with men/women info": 16.8,
+   "% with opening hours": 10.9,
+   "% recently verified": 71.3
+  },
+  {
+   "State / UT": "Goa",
+   "Total washrooms": 99,
+   "Standalone public toilets": 87,
+   "Facilities with toilet": 12,
+   "Districts with data": 2,
+   "% with free/paid info": 19.2,
+   "% with wheelchair info": 20.2,
+   "% with men/women info": 5.1,
+   "% with opening hours": 5.1,
+   "% recently verified": 73.7
+  },
+  {
+   "State / UT": "Uttarakhand",
+   "Total washrooms": 82,
+   "Standalone public toilets": 74,
+   "Facilities with toilet": 8,
+   "Districts with data": 9,
+   "% with free/paid info": 13.4,
+   "% with wheelchair info": 9.8,
+   "% with men/women info": 15.9,
+   "% with opening hours": 1.2,
+   "% recently verified": 81.7
+  },
+  {
+   "State / UT": "Odisha",
+   "Total washrooms": 49,
+   "Standalone public toilets": 39,
+   "Facilities with toilet": 10,
+   "Districts with data": 9,
+   "% with free/paid info": 6.1,
+   "% with wheelchair info": 20.4,
+   "% with men/women info": 12.2,
+   "% with opening hours": 10.2,
+   "% recently verified": 63.3
+  },
+  {
+   "State / UT": "Puducherry",
+   "Total washrooms": 46,
+   "Standalone public toilets": 32,
+   "Facilities with toilet": 14,
+   "Districts with data": 2,
+   "% with free/paid info": 26.1,
+   "% with wheelchair info": 26.1,
+   "% with men/women info": 2.2,
+   "% with opening hours": 21.7,
+   "% recently verified": 60.9
+  },
+  {
+   "State / UT": "Bihar",
+   "Total washrooms": 43,
+   "Standalone public toilets": 42,
+   "Facilities with toilet": 1,
+   "Districts with data": 9,
+   "% with free/paid info": 9.3,
+   "% with wheelchair info": 16.3,
+   "% with men/women info": 14.0,
+   "% with opening hours": 0.0,
+   "% recently verified": 48.8
+  },
+  {
+   "State / UT": "Jammu and Kashmir",
+   "Total washrooms": 41,
+   "Standalone public toilets": 36,
+   "Facilities with toilet": 5,
+   "Districts with data": 10,
+   "% with free/paid info": 9.8,
+   "% with wheelchair info": 12.2,
+   "% with men/women info": 9.8,
+   "% with opening hours": 2.4,
+   "% recently verified": 95.1
+  },
+  {
+   "State / UT": "Sikkim",
+   "Total washrooms": 40,
+   "Standalone public toilets": 39,
+   "Facilities with toilet": 1,
+   "Districts with data": 4,
+   "% with free/paid info": 17.5,
+   "% with wheelchair info": 7.5,
+   "% with men/women info": 5.0,
+   "% with opening hours": 0.0,
+   "% recently verified": 82.5
+  },
+  {
+   "State / UT": "Ladakh",
+   "Total washrooms": 35,
+   "Standalone public toilets": 32,
+   "Facilities with toilet": 3,
+   "Districts with data": 2,
+   "% with free/paid info": 22.9,
+   "% with wheelchair info": 14.3,
+   "% with men/women info": 11.4,
+   "% with opening hours": 0.0,
+   "% recently verified": 74.3
+  },
+  {
+   "State / UT": "Chandigarh",
+   "Total washrooms": 29,
+   "Standalone public toilets": 26,
+   "Facilities with toilet": 3,
+   "Districts with data": 1,
+   "% with free/paid info": 17.2,
+   "% with wheelchair info": 13.8,
+   "% with men/women info": 20.7,
+   "% with opening hours": 10.3,
+   "% recently verified": 72.4
+  },
+  {
+   "State / UT": "Nagaland",
+   "Total washrooms": 23,
+   "Standalone public toilets": 23,
+   "Facilities with toilet": 0,
+   "Districts with data": 4,
+   "% with free/paid info": 0.0,
+   "% with wheelchair info": 8.7,
+   "% with men/women info": 8.7,
+   "% with opening hours": 0.0,
+   "% recently verified": 39.1
+  },
+  {
+   "State / UT": "Assam",
+   "Total washrooms": 21,
+   "Standalone public toilets": 15,
+   "Facilities with toilet": 6,
+   "Districts with data": 11,
+   "% with free/paid info": 9.5,
+   "% with wheelchair info": 9.5,
+   "% with men/women info": 0.0,
+   "% with opening hours": 19.0,
+   "% recently verified": 66.7
+  },
+  {
+   "State / UT": "Chhattisgarh",
+   "Total washrooms": 21,
+   "Standalone public toilets": 15,
+   "Facilities with toilet": 6,
+   "Districts with data": 9,
+   "% with free/paid info": 4.8,
+   "% with wheelchair info": 19.0,
+   "% with men/women info": 0.0,
+   "% with opening hours": 9.5,
+   "% recently verified": 57.1
+  },
+  {
+   "State / UT": "Meghalaya",
+   "Total washrooms": 20,
+   "Standalone public toilets": 20,
+   "Facilities with toilet": 0,
+   "Districts with data": 3,
+   "% with free/paid info": 5.0,
+   "% with wheelchair info": 5.0,
+   "% with men/women info": 10.0,
+   "% with opening hours": 0.0,
+   "% recently verified": 50.0
+  },
+  {
+   "State / UT": "Andaman and Nicobar Islands",
+   "Total washrooms": 19,
+   "Standalone public toilets": 19,
+   "Facilities with toilet": 0,
+   "Districts with data": 2,
+   "% with free/paid info": 36.8,
+   "% with wheelchair info": 0.0,
+   "% with men/women info": 10.5,
+   "% with opening hours": 0.0,
+   "% recently verified": 84.2
+  },
+  {
+   "State / UT": "Jharkhand",
+   "Total washrooms": 12,
+   "Standalone public toilets": 11,
+   "Facilities with toilet": 1,
+   "Districts with data": 7,
+   "% with free/paid info": 8.3,
+   "% with wheelchair info": 25.0,
+   "% with men/women info": 33.3,
+   "% with opening hours": 8.3,
+   "% recently verified": 91.7
+  },
+  {
+   "State / UT": "Mizoram",
+   "Total washrooms": 11,
+   "Standalone public toilets": 10,
+   "Facilities with toilet": 1,
+   "Districts with data": 2,
+   "% with free/paid info": 0.0,
+   "% with wheelchair info": 0.0,
+   "% with men/women info": 0.0,
+   "% with opening hours": 9.1,
+   "% recently verified": 72.7
+  },
+  {
+   "State / UT": "Arunachal Pradesh",
+   "Total washrooms": 4,
+   "Standalone public toilets": 4,
+   "Facilities with toilet": 0,
+   "Districts with data": 3,
+   "% with free/paid info": 0.0,
+   "% with wheelchair info": 0.0,
+   "% with men/women info": 0.0,
+   "% with opening hours": 0.0,
+   "% recently verified": 50.0
+  },
+  {
+   "State / UT": "Manipur",
+   "Total washrooms": 3,
+   "Standalone public toilets": 3,
+   "Facilities with toilet": 0,
+   "Districts with data": 2,
+   "% with free/paid info": 0.0,
+   "% with wheelchair info": 0.0,
+   "% with men/women info": 0.0,
+   "% with opening hours": 0.0,
+   "% recently verified": 0.0
+  },
+  {
+   "State / UT": "Dadra and Nagar Haveli and Daman and Diu",
+   "Total washrooms": 2,
+   "Standalone public toilets": 1,
+   "Facilities with toilet": 1,
+   "Districts with data": 1,
+   "% with free/paid info": 50.0,
+   "% with wheelchair info": 50.0,
+   "% with men/women info": 0.0,
+   "% with opening hours": 50.0,
+   "% recently verified": 100.0
+  },
+  {
+   "State / UT": "Lakshadweep",
+   "Total washrooms": 1,
+   "Standalone public toilets": 1,
+   "Facilities with toilet": 0,
+   "Districts with data": 1,
+   "% with free/paid info": 0.0,
+   "% with wheelchair info": 0.0,
+   "% with men/women info": 0.0,
+   "% with opening hours": 0.0,
+   "% recently verified": 0.0
+  },
+  {
+   "State / UT": "Tripura",
+   "Total washrooms": 1,
+   "Standalone public toilets": 1,
+   "Facilities with toilet": 0,
+   "Districts with data": 1,
+   "% with free/paid info": 0.0,
+   "% with wheelchair info": 0.0,
+   "% with men/women info": 0.0,
+   "% with opening hours": 0.0,
+   "% recently verified": 100.0
+  }
+ ],
+ "byCategory": [
+  {
+   "Category": "Public toilet",
+   "Group": "Public toilet",
+   "Washrooms": 6356,
+   "Share %": 84.4
+  },
+  {
+   "Category": "Restaurant",
+   "Group": "Food & drink",
+   "Washrooms": 356,
+   "Share %": 4.7
+  },
+  {
+   "Category": "Cafe",
+   "Group": "Food & drink",
+   "Washrooms": 124,
+   "Share %": 1.6
+  },
+  {
+   "Category": "Childcare",
+   "Group": "Education & childcare",
+   "Washrooms": 90,
+   "Share %": 1.2
+  },
+  {
+   "Category": "Petrol pump",
+   "Group": "Fuel & highway",
+   "Washrooms": 81,
+   "Share %": 1.1
+  },
+  {
+   "Category": "Mall",
+   "Group": "Shopping",
+   "Washrooms": 76,
+   "Share %": 1.0
+  },
+  {
+   "Category": "Fast food",
+   "Group": "Food & drink",
+   "Washrooms": 37,
+   "Share %": 0.5
+  },
+  {
+   "Category": "Shop (clothes)",
+   "Group": "Shopping",
+   "Washrooms": 34,
+   "Share %": 0.5
+  },
+  {
+   "Category": "Other facility",
+   "Group": "Other places",
+   "Washrooms": 26,
+   "Share %": 0.3
+  },
+  {
+   "Category": "Cinema",
+   "Group": "Tourism & leisure",
+   "Washrooms": 20,
+   "Share %": 0.3
+  },
+  {
+   "Category": "School",
+   "Group": "Education & childcare",
+   "Washrooms": 20,
+   "Share %": 0.3
+  },
+  {
+   "Category": "Supermarket",
+   "Group": "Shopping",
+   "Washrooms": 17,
+   "Share %": 0.2
+  },
+  {
+   "Category": "Bar",
+   "Group": "Food & drink",
+   "Washrooms": 15,
+   "Share %": 0.2
+  },
+  {
+   "Category": "Food court",
+   "Group": "Food & drink",
+   "Washrooms": 15,
+   "Share %": 0.2
+  },
+  {
+   "Category": "Pub",
+   "Group": "Food & drink",
+   "Washrooms": 15,
+   "Share %": 0.2
+  },
+  {
+   "Category": "Community centre",
+   "Group": "Government & civic",
+   "Washrooms": 13,
+   "Share %": 0.2
+  },
+  {
+   "Category": "Conference centre",
+   "Group": "Government & civic",
+   "Washrooms": 13,
+   "Share %": 0.2
+  },
+  {
+   "Category": "Department store",
+   "Group": "Shopping",
+   "Washrooms": 13,
+   "Share %": 0.2
+  },
+  {
+   "Category": "Camp site",
+   "Group": "Tourism & leisure",
+   "Washrooms": 11,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Library",
+   "Group": "Education & childcare",
+   "Washrooms": 11,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Highway rest area",
+   "Group": "Fuel & highway",
+   "Washrooms": 10,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Place of worship",
+   "Group": "Religious",
+   "Washrooms": 10,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Museum",
+   "Group": "Tourism & leisure",
+   "Washrooms": 9,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Bus station",
+   "Group": "Transport",
+   "Washrooms": 8,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Hotel",
+   "Group": "Tourism & leisure",
+   "Washrooms": 7,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Other (platform)",
+   "Group": "Transport",
+   "Washrooms": 7,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Theatre",
+   "Group": "Tourism & leisure",
+   "Washrooms": 7,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Police station",
+   "Group": "Government & civic",
+   "Washrooms": 6,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Shop (jewelry)",
+   "Group": "Shopping",
+   "Washrooms": 6,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Highway services",
+   "Group": "Fuel & highway",
+   "Washrooms": 5,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Park",
+   "Group": "Tourism & leisure",
+   "Washrooms": 5,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Railway station",
+   "Group": "Transport",
+   "Washrooms": 5,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Government office",
+   "Group": "Government & civic",
+   "Washrooms": 4,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Ice cream",
+   "Group": "Food & drink",
+   "Washrooms": 4,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Shop (bakery)",
+   "Group": "Food & drink",
+   "Washrooms": 4,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Shop (tattoo)",
+   "Group": "Shopping",
+   "Washrooms": 4,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Shop (travel agency)",
+   "Group": "Shopping",
+   "Washrooms": 4,
+   "Share %": 0.1
+  },
+  {
+   "Category": "Shop (electronics)",
+   "Group": "Shopping",
+   "Washrooms": 3,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (fashion accessories)",
+   "Group": "Shopping",
+   "Washrooms": 3,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (mobile phone)",
+   "Group": "Shopping",
+   "Washrooms": 3,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Social centre",
+   "Group": "Government & civic",
+   "Washrooms": 3,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Social facility",
+   "Group": "Government & civic",
+   "Washrooms": 3,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Tourist attraction",
+   "Group": "Tourism & leisure",
+   "Washrooms": 3,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Building (bus station)",
+   "Group": "Transport",
+   "Washrooms": 2,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Building (retail)",
+   "Group": "Shopping",
+   "Washrooms": 2,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Clinic",
+   "Group": "Health",
+   "Washrooms": 2,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Convenience store",
+   "Group": "Shopping",
+   "Washrooms": 2,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Leisure (fitness centre)",
+   "Group": "Tourism & leisure",
+   "Washrooms": 2,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Office (ngo)",
+   "Group": "Government & civic",
+   "Washrooms": 2,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (furniture)",
+   "Group": "Shopping",
+   "Washrooms": 2,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (general)",
+   "Group": "Shopping",
+   "Washrooms": 2,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (hairdresser)",
+   "Group": "Shopping",
+   "Washrooms": 2,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (massage)",
+   "Group": "Shopping",
+   "Washrooms": 2,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (shoes)",
+   "Group": "Shopping",
+   "Washrooms": 2,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (ticket)",
+   "Group": "Shopping",
+   "Washrooms": 2,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Airport",
+   "Group": "Transport",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Bank",
+   "Group": "Government & civic",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Building (apartments)",
+   "Group": "Other places",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Building (club)",
+   "Group": "Tourism & leisure",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Building (college)",
+   "Group": "Education & childcare",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Building (dormitory)",
+   "Group": "Other places",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Building (office)",
+   "Group": "Government & civic",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Building (roof)",
+   "Group": "Other places",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Courthouse",
+   "Group": "Government & civic",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Dressing room",
+   "Group": "Other places",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Hospital",
+   "Group": "Health",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Leisure (indoor play)",
+   "Group": "Tourism & leisure",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Leisure (pitch)",
+   "Group": "Tourism & leisure",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Leisure (resort)",
+   "Group": "Tourism & leisure",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Market",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Music school",
+   "Group": "Education & childcare",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Office (educational institution)",
+   "Group": "Education & childcare",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Office (government)",
+   "Group": "Government & civic",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Parking",
+   "Group": "Transport",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Reception desk",
+   "Group": "Government & civic",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (books)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (building supplies)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (car repair)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (chemist)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (coffee)",
+   "Group": "Food & drink",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (computer)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (gift)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (household linen)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (kitchenware)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (medical supply)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (motorcycle repair)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (pastry)",
+   "Group": "Food & drink",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (tea)",
+   "Group": "Food & drink",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (trade)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (tyres)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Shop (video games)",
+   "Group": "Shopping",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Sports centre",
+   "Group": "Tourism & leisure",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Stadium",
+   "Group": "Tourism & leisure",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Tourism (chalet)",
+   "Group": "Tourism & leisure",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Tourism (gallery)",
+   "Group": "Tourism & leisure",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Tourism (motel)",
+   "Group": "Tourism & leisure",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "University",
+   "Group": "Education & childcare",
+   "Washrooms": 1,
+   "Share %": 0.0
+  },
+  {
+   "Category": "Waiting room",
+   "Group": "Transport",
+   "Washrooms": 1,
+   "Share %": 0.0
+  }
+ ],
+ "features": [
+  {
+   "Column": "Name",
+   "What it means": "Washroom name; generic names unified (e.g. 'Public toilet', 'Sulabh Shauchalaya')",
+   "OpenStreetMap tag / source": "OSM name; RapidFuzz canonicalisation",
+   "Rows filled": 7533,
+   "% filled": 100.0,
+   "Chart": false
+  },
+  {
+   "Column": "Name in local script",
+   "What it means": "Name in an Indian script, when mapped",
+   "OpenStreetMap tag / source": "OSM name; non-local values removed",
+   "Rows filled": 3,
+   "% filled": 0.0,
+   "Chart": true
+  },
+  {
+   "Column": "Category",
+   "What it means": "Standalone public toilet, or the kind of place the toilet is in",
+   "OpenStreetMap tag / source": "OSM amenity/shop/tourism…",
+   "Rows filled": 7533,
+   "% filled": 100.0,
+   "Chart": false
+  },
+  {
+   "Column": "State / UT",
+   "What it means": "From official district boundaries",
+   "OpenStreetMap tag / source": "DataMeet boundaries",
+   "Rows filled": 7533,
+   "% filled": 100.0,
+   "Chart": false
+  },
+  {
+   "Column": "District",
+   "What it means": "From official district boundaries",
+   "OpenStreetMap tag / source": "DataMeet boundaries",
+   "Rows filled": 7525,
+   "% filled": 99.9,
+   "Chart": true
+  },
+  {
+   "Column": "City / Town",
+   "What it means": "City as entered by mappers, with old names updated (Bangalore → Bengaluru)",
+   "OpenStreetMap tag / source": "addr:city; alias table + fuzzy match to districts",
+   "Rows filled": 769,
+   "% filled": 10.2,
+   "Chart": true
+  },
+  {
+   "Column": "Address",
+   "What it means": "Street address, tidied",
+   "OpenStreetMap tag / source": "addr:* tags",
+   "Rows filled": 710,
+   "% filled": 9.4,
+   "Chart": true
+  },
+  {
+   "Column": "PIN code",
+   "What it means": "6-digit PIN code, checked against the state's postal zone",
+   "OpenStreetMap tag / source": "addr:postcode / address text",
+   "Rows filled": 309,
+   "% filled": 4.1,
+   "Chart": true
+  },
+  {
+   "Column": "Free or paid",
+   "What it means": "Whether a fee is charged",
+   "OpenStreetMap tag / source": "fee; 'Pay & use' names",
+   "Rows filled": 1178,
+   "% filled": 15.6,
+   "Chart": true
+  },
+  {
+   "Column": "Price",
+   "What it means": "Charge in rupees, when mapped and plausible",
+   "OpenStreetMap tag / source": "charge",
+   "Rows filled": 32,
+   "% filled": 0.4,
+   "Chart": true
+  },
+  {
+   "Column": "Opening hours",
+   "What it means": "Weekly opening hours",
+   "OpenStreetMap tag / source": "opening_hours (parsed)",
+   "Rows filled": 435,
+   "% filled": 5.8,
+   "Chart": true
+  },
+  {
+   "Column": "Who can use",
+   "What it means": "Public, customers only, restricted…",
+   "OpenStreetMap tag / source": "access",
+   "Rows filled": 1873,
+   "% filled": 24.9,
+   "Chart": true
+  },
+  {
+   "Column": "Wheelchair accessible",
+   "What it means": "Yes / Limited / No",
+   "OpenStreetMap tag / source": "wheelchair",
+   "Rows filled": 1326,
+   "% filled": 17.6,
+   "Chart": true
+  },
+  {
+   "Column": "Men / women",
+   "What it means": "Separate, women only, men only, unisex (merged across duplicate points)",
+   "OpenStreetMap tag / source": "female / male / unisex",
+   "Rows filled": 1350,
+   "% filled": 17.9,
+   "Chart": true
+  },
+  {
+   "Column": "Baby changing",
+   "What it means": "Baby changing table",
+   "OpenStreetMap tag / source": "changing_table",
+   "Rows filled": 358,
+   "% filled": 4.8,
+   "Chart": true
+  },
+  {
+   "Column": "Toilet style",
+   "What it means": "Indian (squat), Western (seated), urinals",
+   "OpenStreetMap tag / source": "toilets:position",
+   "Rows filled": 301,
+   "% filled": 4.0,
+   "Chart": true
+  },
+  {
+   "Column": "Handwashing",
+   "What it means": "Handwashing facility",
+   "OpenStreetMap tag / source": "toilets:handwashing",
+   "Rows filled": 411,
+   "% filled": 5.5,
+   "Chart": true
+  },
+  {
+   "Column": "Soap",
+   "What it means": "Soap available",
+   "OpenStreetMap tag / source": "toilets:handwashing:soap",
+   "Rows filled": 0,
+   "% filled": 0.0,
+   "Chart": true
+  },
+  {
+   "Column": "Toilet paper",
+   "What it means": "Toilet paper supplied",
+   "OpenStreetMap tag / source": "toilets:paper_supplied",
+   "Rows filled": 81,
+   "% filled": 1.1,
+   "Chart": true
+  },
+  {
+   "Column": "Drinking water",
+   "What it means": "Drinking water available",
+   "OpenStreetMap tag / source": "drinking_water",
+   "Rows filled": 216,
+   "% filled": 2.9,
+   "Chart": true
+  },
+  {
+   "Column": "Shower",
+   "What it means": "Shower available",
+   "OpenStreetMap tag / source": "shower",
+   "Rows filled": 12,
+   "% filled": 0.2,
+   "Chart": true
+  },
+  {
+   "Column": "Disposal type",
+   "What it means": "Flush, pit latrine, bucket, chemical…",
+   "OpenStreetMap tag / source": "toilets:disposal",
+   "Rows filled": 598,
+   "% filled": 7.9,
+   "Chart": true
+  },
+  {
+   "Column": "Operator",
+   "What it means": "Who runs it, with spelling variants merged",
+   "OpenStreetMap tag / source": "operator; RapidFuzz clustering",
+   "Rows filled": 468,
+   "% filled": 6.2,
+   "Chart": true
+  },
+  {
+   "Column": "Phone",
+   "What it means": "Valid Indian phone numbers in international format",
+   "OpenStreetMap tag / source": "phone; libphonenumber",
+   "Rows filled": 225,
+   "% filled": 3.0,
+   "Chart": true
+  },
+  {
+   "Column": "Website",
+   "What it means": "Valid web address",
+   "OpenStreetMap tag / source": "website",
+   "Rows filled": 198,
+   "% filled": 2.6,
+   "Chart": true
+  },
+  {
+   "Column": "Last edited on OSM",
+   "What it means": "When a volunteer last edited the record",
+   "OpenStreetMap tag / source": "OSM timestamp",
+   "Rows filled": 7533,
+   "% filled": 100.0,
+   "Chart": false
+  },
+  {
+   "Column": "Recently verified",
+   "What it means": "Edited within the last 5 years (older records keep only their location)",
+   "OpenStreetMap tag / source": "computed",
+   "Rows filled": 4948,
+   "% filled": 65.7,
+   "Chart": false
+  },
+  {
+   "Column": "Merged records",
+   "What it means": "Number of OpenStreetMap points combined into this washroom",
+   "OpenStreetMap tag / source": "de-duplication",
+   "Rows filled": 514,
+   "% filled": 6.8,
+   "Chart": false
+  }
+ ],
+ "sources": [
+  {
+   "Source": "OpenStreetMap (OSM)",
+   "Status": "Included — all rows",
+   "What it covers / how it was used": "Every feature tagged amenity=toilets (standalone toilets) or toilets=yes (other places with a toilet) inside India.",
+   "Licence / terms": "© OpenStreetMap contributors, Open Database Licence (ODbL) 1.0. Free to use commercially with credit; derived databases you publish must also be ODbL.",
+   "Link / next step": "https://www.openstreetmap.org/copyright"
+  },
+  {
+   "Source": "QLever OpenStreetMap search (University of Freiburg)",
+   "Status": "Method",
+   "What it covers / how it was used": "All OSM features inside India's national boundary (OSM relation 304716) queried via QLever OSM planet (qlever.dev/osm-planet). Buildings mapped as shapes are placed at their centre point. 0 records with no matching Indian district dropped.",
+   "Licence / terms": "Service only; data licence is OSM's.",
+   "Link / next step": "https://qlever.cs.uni-freiburg.de/osm-planet"
+  },
+  {
+   "Source": "Natural Earth 1:10m (land, minor islands, countries — India point of view)",
+   "Status": "Used to validate locations",
+   "What it covers / how it was used": "Removes records more than 2 km inside a neighbouring country or more than 10 km out at sea. None of the current records failed this check.",
+   "Licence / terms": "Public domain.",
+   "Link / next step": "https://www.naturalearthdata.com/"
+  },
+  {
+   "Source": "Swachh Scan cleaning pipeline (scripts/build_data.py)",
+   "Status": "Applied to every record",
+   "What it covers / how it was used": "Text normalisation, name/operator/city canonicalisation (RapidFuzz), phone validation (libphonenumber), PIN/postal-zone checks, freshness rules and spatial de-duplication (scikit-learn BallTree).",
+   "Licence / terms": "Output remains ODbL (OpenStreetMap derivative).",
+   "Link / next step": "See 'How the data was cleaned' on this page"
+  },
+  {
+   "Source": "DataMeet India district boundaries",
+   "Status": "Used to assign State / District",
+   "What it covers / how it was used": "District polygons with current state names (incl. Ladakh, Telangana, merged DNH & DD). Points within 3 km of a boundary (coast/border) assigned to the nearest district; points on islands/coast the map misses (e.g. Havelock, Lakshadweep) assigned to the nearest state. Delhi is one district in this file.",
+   "Licence / terms": "See repository licence.",
+   "Link / next step": "https://github.com/datameet/maps"
+  },
+  {
+   "Source": "Swachh Bharat / Google Maps toilet locator (MoHUA)",
+   "Status": "NOT included",
+   "What it covers / how it was used": "~57,000+ public toilets listed on Google Maps under the Swachh Bharat Mission / Loo Review programme.",
+   "Licence / terms": "Google Maps content cannot be bulk-copied under Google's Terms of Service.",
+   "Link / next step": "Request the list directly from MoHUA (SBM-Urban) or city municipal corporations."
+  },
+  {
+   "Source": "Municipal / Smart City open data",
+   "Status": "NOT included (next step)",
+   "What it covers / how it was used": "Some cities (e.g. NDMC, Pune, Surat smart city portals) publish public-toilet lists.",
+   "Licence / terms": "Usually Government Open Data Licence – India (GODL).",
+   "Link / next step": "https://data.gov.in (search 'public toilets')"
+  },
+  {
+   "Source": "Swachh Scan user ratings",
+   "Status": "Future",
+   "What it covers / how it was used": "Cleanliness, safety, smell, privacy and supplies ratings from app users.",
+   "Licence / terms": "Your own data.",
+   "Link / next step": "—"
+  }
+ ],
+ "stats": {
+  "detailScore": [
+   4366,
+   1440,
+   818,
+   447,
+   237,
+   184,
+   35,
+   6,
+   0,
+   0
+  ],
+  "editedByYear": [
+   [
+    2011,
+    3
+   ],
+   [
+    2012,
+    61
+   ],
+   [
+    2013,
+    60
+   ],
+   [
+    2014,
+    60
+   ],
+   [
+    2015,
+    93
+   ],
+   [
+    2016,
+    153
+   ],
+   [
+    2017,
+    212
+   ],
+   [
+    2018,
+    489
+   ],
+   [
+    2019,
+    633
+   ],
+   [
+    2020,
+    374
+   ],
+   [
+    2021,
+    570
+   ],
+   [
+    2022,
+    489
+   ],
+   [
+    2023,
+    840
+   ],
+   [
+    2024,
+    1072
+   ],
+   [
+    2025,
+    1205
+   ],
+   [
+    2026,
+    1219
+   ]
+  ],
+  "known": {
+   "free": {
+    "known": 1178,
+    "yes": 728
+   },
+   "wheelchair": {
+    "known": 1326,
+    "yes": 794
+   },
+   "women": {
+    "known": 1350,
+    "yes": 1106
+   },
+   "baby": {
+    "known": 358,
+    "yes": 63
+   },
+   "western": {
+    "known": 301,
+    "yes": 160
+   },
+   "handwashing": {
+    "known": 411,
+    "yes": 381
+   },
+   "water": {
+    "known": 216,
+    "yes": 118
+   },
+   "open247": {
+    "known": 435,
+    "yes": 86
+   }
+  }
+ },
+ "cleaning": {
+  "referenceDate": "2026-11-04",
+  "staleStripYears": 5,
+  "staleDropYears": 15,
+  "steps": [
+   {
+    "stage": "Input",
+    "what": "Rows in the Washrooms sheet",
+    "count": 8380,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "names standardised",
+    "count": 810,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "invalid phone numbers removed",
+    "count": 7,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "addresses tidied",
+    "count": 437,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "phone numbers validated (libphonenumber)",
+    "count": 272,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "city names standardised",
+    "count": 68,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "operator names standardised",
+    "count": 180,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "PIN codes recovered from the address",
+    "count": 2,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "holiday-only opening hours removed (no regular hours given)",
+    "count": 2,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "non-operator values removed from Operator",
+    "count": 38,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "fee inferred from the name (e.g. 'Pay & use')",
+    "count": 25,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "fee taken from text typed into the Operator field",
+    "count": 5,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "men/women inferred from the name",
+    "count": 19,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "'local script' names that were not local script (kept only as search terms)",
+    "count": 9,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "implausible prices removed",
+    "count": 4,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "opening hours kept as text only",
+    "count": 4,
+    "note": ""
+   },
+   {
+    "stage": "Normalise",
+    "what": "invalid PIN codes removed",
+    "count": 1,
+    "note": ""
+   },
+   {
+    "stage": "Location",
+    "what": "Records outside India or far out at sea (removed)",
+    "count": 0,
+    "note": "Checked against Natural Earth 1:10m land and neighbouring countries; island and coastal washrooms are kept"
+   },
+   {
+    "stage": "Freshness",
+    "what": "Records last edited more than 15 years ago (removed)",
+    "count": 83,
+    "note": ""
+   },
+   {
+    "stage": "Freshness",
+    "what": "Records 5–15 years old: kept as 'not recently verified', facility details removed",
+    "count": 2971,
+    "note": "1324 of them had details that were removed"
+   },
+   {
+    "stage": "Duplicates",
+    "what": "Records merged into the same toilet (same block mapped more than once)",
+    "count": 764,
+    "note": "514 groups; e.g. separate men's and women's points 5–20 m apart become one 'separate men & women' toilet"
+   },
+   {
+    "stage": "Output",
+    "what": "Washrooms published",
+    "count": 7533,
+    "note": ""
+   }
+  ]
+ },
+ "built": "2026-11-06",
+ "count": 7533
+}

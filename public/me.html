@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rewards · Swachh Scan</title>
+  <meta name="description" content="Your Swachh Coins, badges and rewards. Earn coins by rating washrooms, reporting problems, adding missing washrooms and inviting friends.">
+  <meta name="theme-color" content="#0a7c68">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>try{var t=JSON.parse(localStorage.getItem('ss.theme')||'""');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+</head>
+<body>
+<header id="siteHead"></header>
+<main class="wrap narrow" id="main">
+  <div class="loading-line" id="loadingLine">Loading your rewards…</div>
+  <div id="root"></div>
+</main>
+<nav id="tabbar"></nav>
+
+<dialog id="redeemDialog" aria-labelledby="redeemTitle">
+  <div class="dlg">
+    <button class="icon-btn close" type="button" data-close aria-label="Close"><svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-x"/></svg></button>
+    <h2 id="redeemTitle">Redeem reward</h2>
+    <div id="redeemBody"></div>
+    <p class="visually-hidden" id="redeemLive" role="status" aria-live="polite"></p>
+  </div>
+</dialog>
+<dialog id="nameDialog" aria-labelledby="nameTitle">
+  <div class="dlg">
+    <button class="icon-btn close" type="button" data-close aria-label="Close"><svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-x"/></svg></button>
+    <h2 id="nameTitle">Your Scout name</h2>
+    <form class="form" id="nameForm" onsubmit="return false">
+      <label class="field"><span>Shown on the leaderboard and Honor Roll</span><input name="scoutName" maxlength="24" minlength="2" required autocomplete="nickname"></label>
+      <p class="form-error" id="nameErr" role="alert" hidden></p>
+      <button class="btn primary block" type="submit">Save</button>
+    </form>
+  </div>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/js/common.js"></script>
+<script src="/js/me.js"></script>
+</body>
+</html>

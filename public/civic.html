@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Civic dashboard · Swachh Scan</title>
+  <meta name="description" content="Public washrooms in India that people report as dirty or broken, the ones rated poorly lately, and the ones that got cleaned. For municipalities, operators and citizens.">
+  <meta name="theme-color" content="#0a7c68">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>try{var t=JSON.parse(localStorage.getItem('ss.theme')||'""');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+</head>
+<body>
+<header id="siteHead"></header>
+<main class="wrap">
+  <section class="page-hero">
+    <h1>Civic dashboard</h1>
+    <p>Washrooms people report as dirty, broken or unsafe, and the ones rated poorly lately — so municipalities and operators can clean them first. Every cleaning and fix is logged publicly, and when a municipal officer confirms a fix, the scout who reported it gets Swachh Coins.</p>
+  </section>
+  <div class="kpis" id="civicKpis" style="margin-top:18px"></div>
+  <div class="tabs" role="tablist" aria-label="Dashboard sections" id="civicTabs" style="margin-top:18px">
+    <button type="button" role="tab" aria-selected="true" data-tab="attention" id="t-attention" aria-controls="p-attention">Needs attention</button>
+    <button type="button" role="tab" aria-selected="false" data-tab="cleaned" id="t-cleaned" aria-controls="p-cleaned" tabindex="-1">Recently cleaned</button>
+    <button type="button" role="tab" aria-selected="false" data-tab="officer" id="t-officer" aria-controls="p-officer" tabindex="-1">Officer action queue</button>
+    <button type="button" role="tab" aria-selected="false" data-tab="coverage" id="t-coverage" aria-controls="p-coverage" tabindex="-1">Coverage &amp; data</button>
+  </div>
+  <section role="tabpanel" id="p-attention" aria-labelledby="t-attention"></section>
+  <section role="tabpanel" id="p-cleaned" aria-labelledby="t-cleaned" hidden></section>
+  <section role="tabpanel" id="p-officer" aria-labelledby="t-officer" hidden></section>
+  <section role="tabpanel" id="p-coverage" aria-labelledby="t-coverage" hidden>
+    <p class="c-sub" id="heroText" style="margin-top:16px">Loading…</p>
+    <div class="tiles" id="tiles"></div>
+    <section class="card" id="knownCard">
+      <div class="card-head"><div>
+        <h2>What we know about them</h2>
+        <p class="c-sub">Share of washrooms with each feature, counting only places where that detail has been mapped.</p>
+      </div></div>
+      <div class="known" id="known"></div>
+    </section>
+    <section class="card" id="stateCard">
+      <div class="card-head">
+        <div>
+          <h2>Washrooms by state and union territory</h2>
+          <p class="c-sub">Number of washrooms after cleaning. Select a state to open it on the map.</p>
+        </div>
+        <div class="toggle" role="group" aria-label="View">
+          <button type="button" data-view="chart" aria-pressed="true">Chart</button>
+          <button type="button" data-view="table" aria-pressed="false">Table</button>
+        </div>
+      </div>
+      <div data-pane="chart"><div class="bars" id="stateBars"></div></div>
+      <div data-pane="table" hidden>
+        <p class="c-sub">How fresh and complete the data is in each state. Darker = higher share.</p>
+        <div class="tbl-wrap"><table class="data" id="stateTable"></table></div>
+      </div>
+    </section>
+    <div class="two">
+      <section class="card">
+        <div class="card-head">
+          <div>
+            <h2>Type of place</h2>
+            <p class="c-sub" id="catSub">Standalone public toilets and the places that have one inside.</p>
+          </div>
+          <div class="toggle" role="group" aria-label="View">
+            <button type="button" data-view="chart" aria-pressed="true">Chart</button>
+            <button type="button" data-view="table" aria-pressed="false">Table</button>
+          </div>
+        </div>
+        <div data-pane="chart"><div class="bars" id="catBars"></div></div>
+        <div data-pane="table" hidden><div class="tbl-wrap" style="max-height:420px;overflow:auto"><table class="data" id="catTable"></table></div></div>
+      </section>
+      <section class="card">
+        <div class="card-head">
+          <div>
+            <h2>How often each detail is filled</h2>
+            <p class="c-sub">Percent of all washrooms where the detail is mapped. The gaps are what the community can fill.</p>
+          </div>
+          <div class="toggle" role="group" aria-label="View">
+            <button type="button" data-view="chart" aria-pressed="true">Chart</button>
+            <button type="button" data-view="table" aria-pressed="false">Table</button>
+          </div>
+        </div>
+        <div data-pane="chart"><div class="bars" id="fillBars"></div></div>
+        <div data-pane="table" hidden><div class="tbl-wrap" style="max-height:420px;overflow:auto"><table class="data" id="fillTable"></table></div></div>
+      </section>
+    </div>
+    <div class="two">
+      <section class="card">
+        <h2>Details mapped per washroom</h2>
+        <p class="c-sub">Out of 9 key details: fee, hours, wheelchair, men/women, baby changing, toilet style, handwashing, operator, address.</p>
+        <div class="cols" id="scoreCols"></div>
+        <div class="col-labels" id="scoreLabels"></div>
+        <p class="c-sub" style="margin-top:10px" id="scoreNote"></p>
+      </section>
+      <section class="card">
+        <h2>When each record was last edited</h2>
+        <p class="c-sub">Year of the latest OpenStreetMap edit. Older records are more likely to be out of date.</p>
+        <div class="cols" id="yearCols"></div>
+        <div class="col-labels" id="yearLabels"></div>
+        <p class="c-sub" style="margin-top:10px" id="yearNote"></p>
+      </section>
+    </div>
+    <section class="card" id="cleaning">
+      <h2>How the data was cleaned</h2>
+      <p class="c-sub" id="cleanIntro"></p>
+      <div class="tbl-wrap"><table class="data" id="cleanTable"></table></div>
+    </section>
+    <section class="card" id="about">
+      <h2>About the data</h2>
+      <div class="prose" id="aboutProse"></div>
+      <div class="cta">
+        <a class="btn primary" href="/data/swachh-scan-cleaned.xlsx" download><svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-download"/></svg> Download the cleaned data (Excel)</a>
+        <a class="btn" href="/data/washrooms.json" download><svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-download"/></svg> Cleaned data as JSON</a>
+        <a class="btn" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-ext"/></svg> ODbL licence</a>
+      </div>
+      <h2 style="margin-top:24px">Sources</h2>
+      <p class="c-sub">What is included, how it was processed, and what is not included yet.</p>
+      <div class="tbl-wrap"><table class="data" id="sourcesTable"></table></div>
+      <details class="more">
+        <summary>What each column means</summary>
+        <div class="tbl-wrap" style="margin-top:10px"><table class="data" id="featuresTable"></table></div>
+      </details>
+    </section>
+    <p class="foot" id="foot"></p>
+  </section>
+</main>
+<nav id="tabbar"></nav>
+<div class="tip" id="tip" role="tooltip"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/js/common.js"></script>
+<script src="/js/civic.js"></script>
+<script src="/js/insights.js"></script>
+</body>
+</html>

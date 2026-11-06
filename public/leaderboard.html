@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Leaderboard & Honor Roll · Swachh Scan</title>
+  <meta name="description" content="Top Swachh Scouts this week, this month and of all time, the monthly champions, and India’s cleanest public washrooms as rated by users.">
+  <meta name="theme-color" content="#0a7c68">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>try{var t=JSON.parse(localStorage.getItem('ss.theme')||'""');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+</head>
+<body>
+<header id="siteHead"></header>
+<main class="wrap narrow">
+  <section class="page-hero">
+    <h1>Leaderboard</h1>
+    <p>The Swachh Scouts doing the most to keep India’s washrooms clean. Coins earned by rating, reporting problems, adding washrooms and inviting friends — spending coins never lowers your rank.</p>
+  </section>
+  <div class="tabs" role="tablist" aria-label="Period" id="periodTabs">
+    <button type="button" role="tab" aria-selected="true" data-period="week" id="tab-week" aria-controls="board">This week</button>
+    <button type="button" role="tab" aria-selected="false" data-period="month" id="tab-month" aria-controls="board" tabindex="-1">This month</button>
+    <button type="button" role="tab" aria-selected="false" data-period="all" id="tab-all" aria-controls="board" tabindex="-1">All time</button>
+  </div>
+  <section id="board" role="tabpanel" aria-labelledby="tab-week" tabindex="0" style="margin-top:14px"><div class="loading-line">Loading…</div></section>
+  <h2 class="eyebrow" id="honor" tabindex="-1">🏅 Honor Roll</h2>
+  <div id="honorRoll"><div class="loading-line">Loading…</div></div>
+</main>
+<nav id="tabbar"></nav>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/js/common.js"></script>
+<script src="/js/leaderboard.js"></script>
+</body>
+</html>

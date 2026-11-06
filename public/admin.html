@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Admin · Swachh Scan</title><meta name="robots" content="noindex"><meta name="theme-color" content="#0a7c68"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"><link rel="stylesheet" href="/css/style.css"><script>try{var t=JSON.parse(localStorage.getItem('ss.theme')||'""');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+<style>
+  /* body is a flex column (style.css), where margin:auto children shrink to fit their content; make the page full width */
+  main.wrap { width: 100%; }
+  .adm-hero { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .adm-tabs { margin: 18px 0 14px; }
+  .adm-panel:focus { outline: none; }
+  .adm-panel h2.panel-title { margin: 6px 0 4px; font-size: 22px; }
+  .adm-panel .panel-sub { margin: 0 0 14px; color: var(--text-2); font-size: 14px; }
+  .adm-list { display: grid; gap: 12px; }
+  .adm-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; display: grid; gap: 10px; }
+  .adm-item .it-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .adm-item .it-title { font-weight: 700; font-size: 16px; overflow-wrap: anywhere; }
+  .adm-item .it-sub { font-size: 13px; color: var(--muted); }
+  .adm-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .adm-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .adm-fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .adm-fields .field { margin: 0; }
+  .adm-fields.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .adm-quote { margin: 0; padding: 8px 12px; border-left: 3px solid var(--brand); background: var(--surface-2); border-radius: 0 8px 8px 0; font-size: 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .adm-kv { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; margin: 0; font-size: 14px; }
+  .adm-kv dt { color: var(--muted); }
+  .adm-kv dd { margin: 0; overflow-wrap: anywhere; }
+  .keybox { display: grid; gap: 10px; margin-top: 12px; }
+  .keybox code { font: 700 15px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace; padding: 10px 12px; border-radius: 10px; background: var(--surface-2); border: 1px dashed var(--border-strong); overflow-wrap: anywhere; user-select: all; }
+  .kpi.kpi-go { cursor: pointer; text-align: left; font: inherit; color: inherit; }
+  .kpi.kpi-go:hover { border-color: var(--brand); }
+  .kpi.hot { border-color: var(--warn); background: var(--warn-bg); }
+  .adm-toolbar { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; margin-bottom: 14px; }
+  .adm-toolbar .field { margin: 0; flex: 1 1 220px; }
+  .adm-check { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; }
+  .adm-check input { width: 18px; height: 18px; accent-color: var(--brand); }
+  table.data td .btn { white-space: nowrap; }
+  table.data td.acts { white-space: nowrap; }
+  table.data td.acts .btn + .btn { margin-left: 4px; }
+  .signin { max-width: 460px; }
+  .dlg .form { margin-top: 6px; }
+  .dlg .dlg-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 4px; }
+  /* long words from businesses and scouts (pasted links, ad text, addresses) wrap inside the card on phones */
+  .adm-item > *, .adm-item .it-head > div { min-width: 0; }
+  .adm-item .it-sub, .adm-item .small, .adm-item p, .adm-item .card, .adm-item .tag { overflow-wrap: anywhere; }
+  .adm-item .tag { white-space: normal; height: auto; min-height: 22px; padding-block: 2px; }
+  .adm-item .st { flex: none; }
+  .adm-panel .notice-box p { overflow-wrap: anywhere; }
+  @media (max-width: 720px) {
+    .adm-fields, .adm-fields.two { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body><header id="siteHead"></header><main class="wrap">
+  <section class="page-hero adm-hero">
+    <div>
+      <h1>Admin</h1>
+      <p>Approve new washrooms and operator claims, confirm UPI payments, record inspections, and manage rewards, ads, officer access and scouts.</p>
+    </div>
+    <button class="btn" type="button" id="signOut" hidden><svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-logout"/></svg> Sign out</button>
+  </section>
+
+  <section class="card signin" id="signin" aria-labelledby="signinTitle">
+    <h2 id="signinTitle">Sign in</h2>
+    <p class="c-sub">Use the admin password set as <code>ADMIN_TOKEN</code> in your Vercel project. It stays in this browser tab only.</p>
+    <form class="form" id="signinForm" novalidate>
+      <label class="field"><span>Admin password</span><input type="password" id="pw" name="pw" autocomplete="current-password" required></label>
+      <p class="form-error" id="signinError" role="alert" hidden></p>
+      <div><button class="btn primary" type="submit" id="signinBtn"><svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-lock"/></svg> Sign in</button></div>
+    </form>
+    <div id="signinHelp"></div>
+  </section>
+
+  <div id="console" hidden>
+    <div class="tabs adm-tabs" role="tablist" aria-label="Admin sections" id="tabs"></div>
+    <section class="adm-panel" id="panel" role="tabpanel" tabindex="-1"></section>
+  </div>
+</main>
+
+<dialog id="askDialog" aria-labelledby="askTitle">
+  <div class="dlg">
+    <button class="icon-btn close" type="button" data-close aria-label="Close"><svg class="ic" aria-hidden="true"><use href="/img/icons.svg#i-x"/></svg></button>
+    <h2 id="askTitle"></h2>
+    <p id="askText" hidden></p>
+    <form class="form" id="askForm" novalidate></form>
+  </div>
+</dialog>
+
+<nav id="tabbar"></nav><div class="toast" id="toast" role="status" aria-live="polite"></div><script src="/js/common.js"></script><script src="/js/admin.js"></script></body></html>
